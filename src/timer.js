@@ -53,3 +53,8 @@ function resetTimer() {
 function displayTime(formattedTime) {
     document.getElementById('timerDisplay').textContent = formattedTime;
 }
+
+// EVENT LISTENERS
+document.getElementById('startButton').addEventListener('click', startTimer);
+document.getElementById('pauseButton').addEventListener('click', pauseTimer);
+document.getElementById('resetButton').addEventListener('click', resetTimer);
