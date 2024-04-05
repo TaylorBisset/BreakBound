@@ -6,27 +6,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BreakBound - Restful App</title>
+    <title>BreakBound</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
     <header>
-        <h1>BreakBound - Restful App</h1>
+        <h1>BreakBound <br>The Restful App</h1>
         <nav>
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#features">About</a></li>
+            <li><a href="#features">Features</a></li>
           </ul>
         </nav>
     </header>
     
     <main>
+      <div id="timerDisplay">00:00:00</div>
+      
+      <button id="startButton">Start</button>
+      <button id="pauseButton">Pause</button>
+      <button id="resetButton">Reset</button>
+
       <section id="about">
           <h2>About BreakBound</h2>
-          <p>Information about your Pomodoro Timer app.</p>
+          <p>BreakBound is a time management system that combines 
+            the Pomodoro technique with the 20/20/20 rule.</p>
       </section>
+
       <section id="features">
           <h2>Features</h2>
           <ul>
@@ -42,7 +50,7 @@
   </footer>
     
     <!-- JavaScript files go here -->
-    <script src="script.js"></script> 
+    <script src="../src/timer.js"></script> 
 
 </body>
 
