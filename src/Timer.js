@@ -10,9 +10,11 @@ const Timer = () => {
     const [formattedTime, setFormattedTime] = useState('00:00:00');
 
     useEffect(() => {
+        let intervalId = null;
         if (!isPaused) {
             setStartTime(Date.now() - pausedTime);
-            setTimeInterval(setInterval(updateTimer, 1000));
+            intervalId = setInterval(updateTimer, 1000);
+            setTimeInterval(intervalId);
         } else {
             clearInterval(timeInterval);
         }
@@ -35,8 +37,8 @@ const Timer = () => {
     };
 
     const updateTimer = () => {
-        let elapsedTime = getTime();
-        let newFormattedTime = convertTimeToHHMMSS(elapsedTime);
+        const elapsedTime = getTime();
+        const newFormattedTime = convertTimeToHHMMSS(elapsedTime);
         setFormattedTime(newFormattedTime);
     };
 
