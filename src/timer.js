@@ -38,6 +38,7 @@ function convertTimeToHHMMSS(time) {
     time %= (60 * 1000); // time remaining after minutes
     let seconds = Math.floor(time / 1000); // find seconds after minutes
 
+    // display time as [HH:MM:SS]
     return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
 
@@ -49,6 +50,6 @@ function resetTimer() {
     displayTime("00:00:00");
 }
 
-function displayTime() {
-
+function displayTime(formattedTime) {
+    document.getElementById('timerDisplay').textContent = formattedTime;
 }
