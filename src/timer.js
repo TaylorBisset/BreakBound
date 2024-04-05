@@ -32,13 +32,13 @@ function updateTimer() {
 }
 
 function convertTimeToHHMMSS(time) {
-    let hours = Math.floor(time / 60 * 60 * 1000); // find hours from time
+    let hours = Math.floor(time / (60 * 60 * 1000)); // find hours from time
     time %= (60 * 60 * 1000); // time remaining after hours
-    let minutes = Math.floor(time / 60 * 1000); // find minutes after hours
-    time %= (60 * 60 * 1000); // time remaining after minutes
-    let seconds = Math.floor(time / 60 * 60 * 1000); // find seconds after minutes
+    let minutes = Math.floor(time / (60 * 1000)); // find minutes after hours
+    time %= (60 * 1000); // time remaining after minutes
+    let seconds = Math.floor(time / 1000); // find seconds after minutes
 
-    // return String(hours) String(minues) String(seconds);
+    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
 
 function resetTimer() {
