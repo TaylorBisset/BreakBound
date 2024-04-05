@@ -5,7 +5,8 @@ let startTime = 0;
 let timeInterval = null;
 
 function startTimer() {
-    
+    startTime = Date.now();
+    timeInterval = setInterval(updateTimer, 1000) // update every 1000 milliseconds
 }
 
 function pauseTimer() {
@@ -33,29 +34,5 @@ function convertTimeToHHMMSS() {
 }
 
 function displayTime() {
-    
+
 }
-
-
-/*
-define variables
-
-startTime
-timeInterval
-
-
-define functions 
-
-startTimer
-pauseTimer
-stopTimer
-resetTimer
-updateTimer
-
-getTime
-convert time to HH:MM:SS
-updateTime
-displayTime
-
-
-*/
