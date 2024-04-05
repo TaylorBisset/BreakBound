@@ -36,7 +36,10 @@ function convertTimeToHHMMSS() {
 }
 
 function resetTimer() {
-
+    clearInterval(timeInterval);
+    startTime = 0;
+    pausedTime = 0;
+    isPaused = false;
 }
 
 function displayTime() {
